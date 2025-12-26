@@ -1,0 +1,112 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Portfolio Design System - Dark Blue Neon Theme */
+
+@layer base {
+  :root {
+    /* Dark blue gradient background */
+    --background: 220 40% 8%;
+    --background-secondary: 220 35% 12%;
+    --foreground: 210 40% 98%;
+
+    /* Neon blue - primary accent */
+    --primary: 200 100% 50%;
+    --primary-foreground: 220 40% 8%;
+    --primary-glow: 200 100% 60%;
+
+    /* Electric cyan */
+    --secondary: 180 100% 50%;
+    --secondary-foreground: 220 40% 8%;
+    --secondary-glow: 180 100% 60%;
+
+    /* Hot pink accent */
+    --accent: 330 100% 60%;
+    --accent-foreground: 220 40% 8%;
+    --accent-glow: 330 100% 70%;
+
+    /* Card and surfaces */
+    --card: 220 35% 15%;
+    --card-foreground: 210 40% 98%;
+    --card-border: 200 100% 50%;
+
+    /* Muted elements */
+    --muted: 220 30% 20%;
+    --muted-foreground: 210 20% 70%;
+
+    /* Borders and inputs */
+    --border: 220 30% 25%;
+    --input: 220 30% 20%;
+    --ring: 200 100% 50%;
+
+    /* Stats and success */
+    --success: 150 80% 50%;
+    --success-glow: 150 80% 60%;
+
+    --radius: 0.75rem;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(200 100% 50%), hsl(180 100% 50%));
+    --gradient-accent: linear-gradient(135deg, hsl(330 100% 60%), hsl(280 100% 60%));
+    --gradient-background: linear-gradient(180deg, hsl(220 40% 8%), hsl(220 35% 12%));
+
+    /* Shadows and glows */
+    --glow-primary: 0 0 20px hsl(200 100% 50% / 0.5), 0 0 40px hsl(200 100% 50% / 0.3);
+    --glow-secondary: 0 0 20px hsl(180 100% 50% / 0.5), 0 0 40px hsl(180 100% 50% / 0.3);
+    --glow-accent: 0 0 20px hsl(330 100% 60% / 0.5), 0 0 40px hsl(330 100% 60% / 0.3);
+
+    /* Transitions */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body;
+    background: linear-gradient(180deg, hsl(220 40% 8%), hsl(220 35% 12%));
+    min-height: 100vh;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+  }
+
+  /* Smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: hsl(220 35% 12%);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: hsl(200 100% 50%);
+    border-radius: 5px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: hsl(180 100% 50%);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
